@@ -1,0 +1,24 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Tencryn <41876297+Tencryn@users.noreply.github.com>
+Date: Wed, 10 Nov 2021 23:12:11 +0000
+Subject: [PATCH] Lite Config
+
+
+diff --git a/src/main/java/org/bukkit/Server.java b/src/main/java/org/bukkit/Server.java
+index ccfb8a8dcd51bf998c79298a22e38cebb2be6d39..f7af20ea3716344c33ca820d830786c1635e2280 100644
+--- a/src/main/java/org/bukkit/Server.java
++++ b/src/main/java/org/bukkit/Server.java
+@@ -1730,6 +1730,13 @@ public interface Server extends PluginMessageRecipient, net.kyori.adventure.audi
+         }
+         // Purpur end
+ 
++        // Lite start
++        @NotNull
++        public org.bukkit.configuration.file.YamlConfiguration getLiteConfig() {
++            throw new UnsupportedOperationException("Not supported yet.");
++        }
++        // Lite end
++
+         /**
+          * Sends the component to the player
+          *
